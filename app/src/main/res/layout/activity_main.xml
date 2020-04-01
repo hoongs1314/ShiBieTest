@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00bfff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="8"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/javaCV"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:background="@color/colorAccent"
+            android:layout_gravity="center"
+            android:id="@+id/showImg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+            <Button
+                android:text="二维码识别"
+                android:id="@+id/qrCodeB"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp" />
+            <Button
+                android:text="颜色识别"
+                android:id="@+id/colorB"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp" />
+            <Button
+                android:text="图形识别"
+                android:id="@+id/shapeB"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp" />
+            <Button
+                android:text="车牌识别"
+                android:id="@+id/chepaiB"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/show_news"
+            android:text="识别无结果"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
